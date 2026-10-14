@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Form đăng ký người dùng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            padding: 40px 20px;
+        }
+        .form-container {
+            max-width: 450px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #1a252f;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #333333;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .gender-options {
+            display: flex;
+            gap: 20px;
+            margin-top: 5px;
+        }
+        .gender-options label {
+            font-weight: normal;
+            cursor: pointer;
+        }
+        .submit-btn {
+            width: 100%;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>ĐĂNG KÝ NGƯỜI DÙNG</h2>
+    
+    <!-- Khai báo action và method POST theo đúng yêu cầu -->
+    <form action="http://demo.codegym.vn/6/registration_form/register.php" method="POST">
+        
+        <!-- Trường Họ và tên: name="name" -->
+        <div class="form-group">
+            <label for="name">Họ và tên:</label>
+            <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+        </div>
+
+        <!-- Trường Email: name="email" -->
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Nhập địa chỉ email" required>
+        </div>
+
+        <!-- Trường Số điện thoại: name="phone" -->
+        <div class="form-group">
+            <label for="phone">Số điện thoại:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+        </div>
+
+        <!-- Trường Giới tính: name="gender" -->
+        <div class="form-group">
+            <label>Giới tính:</label>
+            <div class="gender-options">
+                <label><input type="radio" name="gender" value="nam" checked> Nam</label>
+                <label><input type="radio" name="gender" value="nu"> Nữ</label>
+                <label><input type="radio" name="gender" value="khac"> Khác</label>
+            </div>
+        </div>
+
+        <!-- Nút gửi dữ liệu -->
+        <button type="submit" class="submit-btn">Đăng ký</button>
+    </form>
+</div>
+
+</body>
+</html>
